@@ -263,9 +263,6 @@
  </div>
 </div>
 
-<!-- Overlay for mobile -->
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileSidebar()"></div>
-
 <script>
 	   window.sendToWA = function(pdfLink, hp, nama, kode, trans_kode) {
 	       console.log('sendToWA called with:', { pdfLink, hp, nama, kode, trans_kode });
@@ -286,35 +283,6 @@
 	           feather.replace();
 	       }
 
-	       // Toggle Sidebar
-	       window.toggleSidebar = function() {
-	           const sidebar = document.getElementById('sidebar');
-	           if (sidebar && sidebar.classList) {
-	               sidebar.classList.toggle('collapsed');
-	               localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
-	           }
-	       };
-	
-	       // Toggle Mobile Sidebar
-	       window.toggleMobileSidebar = function() {
-	           const sidebar = document.getElementById('sidebar');
-	           const overlay = document.getElementById('sidebarOverlay');
-	           if (sidebar && sidebar.classList) {
-	               sidebar.classList.toggle('mobile-active');
-	           }
-	           if (overlay && overlay.classList) {
-	               overlay.classList.toggle('active');
-	           }
-	       };
-	
-	       // Remember sidebar state
-	       const sidebar = document.getElementById('sidebar');
-	       if (sidebar && sidebar.classList) {
-	           const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
-	           if (isCollapsed && window.innerWidth > 1024) {
-	               sidebar.classList.add('collapsed');
-	           }
-	       }
 	       // Initialize password fields on page load
 	       togglePasswordFields();
 

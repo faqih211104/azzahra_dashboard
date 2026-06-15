@@ -266,37 +266,11 @@
  </div>
 </div>
 
-<!-- Overlay for mobile -->
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileSidebar()"></div>
-
 <script>
 	   // Initialize Feather Icons
 	   if (typeof feather !== 'undefined') {
 	       feather.replace();
 	   }
-
-	   // Toggle Sidebar
-	   function toggleSidebar() {
-	       const sidebar = document.getElementById('sidebar');
-	       sidebar.classList.toggle('collapsed');
-	       localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
-	   }
-
-	   // Toggle Mobile Sidebar
-	   function toggleMobileSidebar() {
-	       const sidebar = document.getElementById('sidebar');
-	       const overlay = document.getElementById('sidebarOverlay');
-	       sidebar.classList.toggle('mobile-active');
-	       overlay.classList.toggle('active');
-	   }
-
-	   // Remember sidebar state
-	   window.addEventListener('DOMContentLoaded', () => {
-	       const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
-	       if (isCollapsed && window.innerWidth > 1024) {
-	           document.getElementById('sidebar').classList.add('collapsed');
-	       }
-	   });
 
 	   // Initialize modal tabs when modal is shown
 	   $('#add-new-costom').on('shown.bs.modal', function () {

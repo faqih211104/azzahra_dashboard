@@ -1,9 +1,6 @@
 <?php $this->load->view('Template/header'); ?>
 <!-- Header -->
         <header class="page-header mb-5">
-            <div class="mobile-menu-btn" onclick="toggleMobileSidebar()">
-                <i data-feather="menu"></i>
-            </div>
             <div class="header-title">
                 <h1><i data-feather="package" class="w-6 h-6 inline-block mr-2"></i>Konfirmasi</h1>                
                 <p>List data yang butuh konfirmasi</p>

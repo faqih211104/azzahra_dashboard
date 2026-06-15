@@ -1,9 +1,6 @@
 	<?php $this->load->view('Template/header'); ?>
 			<!-- Header -->
 			<header class="page-header">
-				<div class="mobile-menu-btn" onclick="toggleMobileSidebar()">
-					<i data-feather="menu"></i>
-				</div>
 				<div class="header-title">
 					<h1>
 						<i data-feather="users" class="w-6 h-6 inline-block mr-2"></i>Quick Service</h1>
@@ -255,9 +252,6 @@
 	 </div>
 </div>
 
-	<!-- Overlay for mobile -->
-	<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileSidebar()"></div>
-
 <script>
 	   $(document).ready(function() {
 	       // Initialize Feather Icons
@@ -265,35 +259,6 @@
 	           feather.replace();
 	       }
 
-	       // Toggle Sidebar
-	       window.toggleSidebar = function() {
-	           const sidebar = document.getElementById('sidebar');
-	           if (sidebar) {
-	               sidebar.classList.toggle('collapsed');
-	               localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
-	           }
-	       };
-
-	       // Toggle Mobile Sidebar
-	       window.toggleMobileSidebar = function() {
-	           const sidebar = document.getElementById('sidebar');
-	           const overlay = document.getElementById('sidebarOverlay');
-	           if (sidebar) {
-	               sidebar.classList.toggle('mobile-active');
-	           }
-	           if (overlay) {
-	               overlay.classList.toggle('active');
-	           }
-	       };
-
-	       // Remember sidebar state
-	       const sidebar = document.getElementById('sidebar');
-	       if (sidebar) {
-	           const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
-	           if (isCollapsed && window.innerWidth > 1024) {
-	               sidebar.classList.add('collapsed');
-	           }
-	       }
 	       // Initialize password fields on page load
 	       togglePasswordFields();
 

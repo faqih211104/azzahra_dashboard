@@ -205,6 +205,14 @@
             if (overlay) overlay.classList.toggle('active');
         }
 
+        // Close Mobile Sidebar
+        function closeMobileSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            if (sidebar) sidebar.classList.remove('mobile-active');
+            if (overlay) overlay.classList.remove('active');
+        }
+
         // Remember sidebar state
         window.addEventListener('DOMContentLoaded', () => {
             const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';

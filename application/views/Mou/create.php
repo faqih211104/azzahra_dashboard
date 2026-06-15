@@ -1,9 +1,6 @@
 <?php $this->load->view('Template/header'); ?>
         <!-- Header -->
         <header class="page-header">
-            <div class="mobile-menu-btn" onclick="toggleMobileSidebar()">
-                <i data-feather="menu"></i>
-            </div>
             <div class="header-title">
                 <h1><i data-feather="file-text" class="w-6 h-6 inline-block mr-2"></i>Buat Mou</h1>
                 <p>Isi form Mou & generate PDF</p>
@@ -131,9 +128,6 @@
         </div>
     </main>
 </div>
-
-<!-- Overlay for mobile -->
-<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileSidebar()"></div>
 
 <script>
 const DEFAULT_DATE = '<?= date('Y-m-d') ?>';

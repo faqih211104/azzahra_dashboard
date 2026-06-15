@@ -1,9 +1,6 @@
 <?php $this->load->view('Template/header'); ?>
   <!-- Header -->
         <header class="page-header">
-            <div class="mobile-menu-btn" onclick="toggleMobileSidebar()">
-                <i data-feather="menu"></i>
-            </div>
             <div class="header-title">
                 <h1>
                     <i data-feather="user" class="w-6 h-6 inline-block mr-2"></i>Karyawan</h1>                
